@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gandi Obulamma | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<style>
+:root{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --text:#ffffff;
+    --accent:#38bdf8;
+}
+
+.light{
+    --bg:#f5f7fa;
+    --card:#ffffff;
+    --text:#0f172a;
+    --accent:#2563eb;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    transition:0.3s;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+}
+
+#particles-js{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-box{
+    max-width:800px;
+}
+
+.profile{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    border:4px solid var(--accent);
+    margin-bottom:15px;
+}
+
+h1{
+    font-size:3rem;
+}
+
+#typing{
+    color:var(--accent);
+    font-size:1.3rem;
+    margin:10px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:12px 20px;
+    border-radius:8px;
+    background:var(--accent);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* SECTIONS */
+section{
+    padding:60px 10%;
+}
+
+.title{
+    text-align:center;
+    color:var(--accent);
+    margin-bottom:30px;
+}
+
+/* SKILLS */
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+.skill{
+    background:var(--card);
+    padding:10px 18px;
+    border-radius:20px;
+}
+
+/* PROJECTS */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:var(--card);
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card a{
+    display:inline-block;
+    margin-top:10px;
+    color:var(--accent);
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* CONTACT */
+.contact-box{
+    text-align:center;
+}
+
+/* BUTTONS */
+.toggle{
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:var(--accent);
+    border:none;
+    padding:10px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+#topBtn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:var(--accent);
+    border:none;
+    padding:12px;
+    border-radius:50%;
+    display:none;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<button class="toggle" onclick="toggleTheme()">🌙</button>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-box">
+
+<!-- FIXED IMAGE PATH -->
+<img src="C:\Users\vyshu\Downloads\1343.jpeg" class="profile">
+
+<h1>Gandi Obulamma</h1>
+
+<h2 id="typing"></h2>
+
+<p>
+B.Tech Computer Science Engineering Student at Sri Venkateswara College of Engineering, Tirupati.<br>
+Passionate about Full Stack Development, UI/UX Design, and Cloud Computing (AWS).
+</p>
+
+<!-- FIXED BUTTON -->
+<a href="#projects" class="btn">View Projects</a>
+<a href="C:\Users\vyshu\Downloads\Resume.pdf" class="btn" download>Download Resume</a>
+
+</div>
+</section>
+
+<!-- SKILLS -->
+<section>
+<h2 class="title">Skills</h2>
+<div class="skills">
+<div class="skill">Java</div>
+<div class="skill">C</div>
+<div class="skill">C++</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Full Stack Development</div>
+<div class="skill">UI/UX Design</div>
+<div class="skill">AWS Cloud</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2 class="title">Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<h3>Weather Forecasting App</h3>
+<p>Real-time weather updates using API integration.</p>
+<a href="https://projectweather022.netlify.app/" target="_blank">Live Demo</a>
+</div>
+
+<div class="card">
+<h3>Designing Netflix App</h3>
+<p>Smart home automation with flame detection and remote control.</p>
+<a href="https://www.figma.com/design/cBlqVoJycsxpnKGPcR2paN/Untitled?node-id=0-1&t=phkudV58DacAu6JG-1">Live Demo</a>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section>
+<h2 class="title">Contact</h2>
+
+<div class="contact-box">
+<p>Email: vyshu1012@gmail.com</p>
+<p>LinkedIn: https://linkedin.com/in/obulamma-gandi</p>
+<p>GitHub: https://github.com/GandiObulamma</p>
+</div>
+</section>
+
+<button id="topBtn" onclick="scrollTopBtn()">↑</button>
+
+<script>
+
+// THEME
+function toggleTheme(){
+    document.body.classList.toggle("light");
+}
+
+// TYPING EFFECT
+const texts=[
+"Full Stack Developer",
+"UI/UX Designer",
+"CSE Student"
+];
+
+let i=0,j=0;
+
+function type(){
+    let el=document.getElementById("typing");
+
+    if(j<texts[i].length){
+        el.innerHTML+=texts[i][j];
+        j++;
+        setTimeout(type,100);
+    }else{
+        setTimeout(erase,1000);
+    }
+}
+
+function erase(){
+    let el=document.getElementById("typing");
+
+    if(j>0){
+        el.innerHTML=texts[i].substring(0,j-1);
+        j--;
+        setTimeout(erase,50);
+    }else{
+        i=(i+1)%texts.length;
+        setTimeout(type,200);
+    }
+}
+
+type();
+
+// SCROLL BUTTON
+window.onscroll=function(){
+    let btn=document.getElementById("topBtn");
+    btn.style.display=window.scrollY>300?"block":"none";
+}
+
+function scrollTopBtn(){
+    window.scrollTo({top:0,behavior:"smooth"});
+}
+
+// PARTICLES
+particlesJS("particles-js",{
+    particles:{
+        number:{value:60},
+        size:{value:3},
+        color:{value:"#38bdf8"},
+        line_linked:{enable:true,color:"#38bdf8"}
+    }
+});
+
+</script>
+
+</body>
+</html>
